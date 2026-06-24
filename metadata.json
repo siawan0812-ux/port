@@ -1,0 +1,6 @@
+{
+  "name": "Sia个人作品集画册",
+  "description": "基于3D书页翻转音效的高保真互动式个人作品集手账，沉浸式沙滩平铺背景。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
