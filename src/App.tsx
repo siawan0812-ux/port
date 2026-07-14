@@ -54,6 +54,8 @@ import p16 from "./assets/images/16.jpg";
 import p17 from "./assets/images/17.jpg";
 // @ts-ignore
 import p18 from "./assets/images/18.jpg";
+// @ts-ignore
+import p19 from "./assets/images/18.jpg"; 
 
 const defaultImages: Record<number, string> = {
   1: p1,
@@ -74,6 +76,7 @@ const defaultImages: Record<number, string> = {
   16: p16,
   17: p17,
   18: p18,
+  19: p19,
 };
 
 export default function App() {
@@ -92,7 +95,7 @@ export default function App() {
         const mergedImages = { ...dbImages };
 
         // Fallback to our high-quality generated default static images (production-safe)
-        for (let i = 1; i <= 18; i++) {
+        for (let i = 1; i <= 19; i++) {
           if (!mergedImages[i]) {
             mergedImages[i] = defaultImages[i];
           }
@@ -148,11 +151,11 @@ export default function App() {
       const matchAnyNumber = filename.match(/(\d+)/);
       if (matchAnyNumber) {
         const num = parseInt(matchAnyNumber[1], 10);
-        if (num >= 1 && num <= 18) return num;
+        if (num >= 1 && num <= 19) return num;
       }
 
       // Fallback: If 18 files were uploaded, map them alphabetically by name
-      if (total === 18) {
+      if (total === 19) {
         return index + 1;
       }
       return -1;
@@ -169,7 +172,7 @@ export default function App() {
     sortedFiles.forEach((file, index) => {
       const pageNum = getPageNumber(file.name, index, sortedFiles.length);
       
-      if (pageNum >= 1 && pageNum <= 18) {
+      if (pageNum >= 1 && pageNum <= 19) {
         const reader = new FileReader();
         reader.onload = async (event) => {
           if (event.target?.result && typeof event.target.result === "string") {
@@ -282,7 +285,7 @@ export default function App() {
 
             <div className="text-xs text-slate-600 space-y-3.5 leading-relaxed">
               <p className="font-medium text-slate-700">
-                本网页支持完美、直接地展示您的画册第 1 至 18 页 JPG 内容，您可以通过以下两种简单方式导入：
+                本网页支持完美、直接地展示您的画册第 1 至 19 页 JPG 内容，您可以通过以下两种简单方式导入：
               </p>
               
               <div className="space-y-2">

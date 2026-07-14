@@ -220,7 +220,7 @@ export const getPortfolioPages = (
   images: Record<number, string>,
   onUpload: (id: number, dataUrl: string) => void
 ): PortfolioPage[] => {
-  return Array.from({ length: 18 }, (_, index) => {
+  return Array.from({ length: 19 }, (_, index) => {
     const pageNum = index + 1;
     return {
       id: pageNum,
