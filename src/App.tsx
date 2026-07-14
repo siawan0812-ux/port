@@ -54,6 +54,8 @@ import p16 from "./assets/images/16.jpg";
 import p17 from "./assets/images/17.jpg";
 // @ts-ignore
 import p18 from "./assets/images/18.jpg";
+// @ts-ignore
+import p19 from "./assets/images/18.jpg";
 
 const defaultImages: Record<number, string> = {
   1: p1,
